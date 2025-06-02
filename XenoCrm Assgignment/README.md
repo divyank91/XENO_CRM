@@ -7,32 +7,32 @@ A comprehensive customer relationship management platform with AI-powered segmen
 
 ## 📋 Features Implemented
 
-### ✅ 1. Data Ingestion APIs
+1. Data Ingestion APIs
 - **POST /api/customers** - Add new customers with validation
 - **POST /api/orders** - Create orders and auto-update customer metrics
 - **Secure REST endpoints** with Zod validation
 - **Real-time customer metrics** (total spent, visit count, last visit)
 
-### ✅ 2. Campaign Creation UI
+2. Campaign Creation UI
 - **Rule-based audience builder** with AND/OR logic
 - **Real-time audience size preview** before campaign creation
 - **Flexible segmentation** (spending, visits, status, location)
 - **Campaign history** with delivery statistics
 - **Clean, intuitive interface** with modern design
 
-### ✅ 3. Campaign Delivery & Logging
+3. Campaign Delivery & Logging
 - **Personalized messaging** with {{name}} placeholders
 - **Vendor API simulation** (90% success, 10% failure rate)
 - **Delivery receipt processing** with status updates
 - **Communication logs** tracking all message attempts
 - **Real-time status tracking** (pending → sent/failed)
 
-### ✅ 4. Authentication
+4. Authentication
 - **Demo authentication system** (ready for Google OAuth integration)
 - **Session-based access control** for all protected routes
 - **User context** throughout the application
 
-### ✅ 5. AI Integration
+5. AI Integration
 - **Natural language to segment rules** conversion
 - **AI-powered message suggestions** with engagement predictions
 - **Campaign performance insights** generation
@@ -167,27 +167,27 @@ npx tsx server/seed.ts # Add sample data
 npm run dev
 ```
 
-## 🎯 Key Design Decisions
+Key Design Decisions
 
-### Scalability Considerations
+- Scalability Considerations
 - **Database indexing** on frequently queried fields (email, status, totalSpent)
 - **Async campaign delivery** with batch processing capability
 - **Stateless API design** for horizontal scaling
 - **Efficient query patterns** with Drizzle ORM
 
-### UX/UI Design
+- UX/UI Design
 - **Progressive disclosure** - complex features behind simple interfaces
 - **Real-time feedback** - immediate audience size calculation
 - **Visual hierarchy** - clear distinction between sections
 - **Responsive design** - works on all screen sizes
 
-### Code Quality
+- Code Quality
 - **TypeScript throughout** for type safety
 - **Modular architecture** with clear separation of concerns
 - **Consistent error handling** with proper HTTP status codes
 - **Input validation** using Zod schemas
 
-## 📈 Performance Features
+-Performance Features
 
 ### Campaign Delivery Flow
 1. **Segment calculation** with optimized database queries
@@ -195,14 +195,14 @@ npm run dev
 3. **Async delivery simulation** with realistic timing
 4. **Real-time status updates** via polling
 
-### Data Integrity
+-Data Integrity
 - **Transaction safety** for order creation and customer updates
 - **Input validation** at API and database levels
 - **Consistent data types** across frontend and backend
 
-## 🤖 AI Tools and Integration Summary
+-AI Tools and Integration Summary
 
-### 1. OpenAI GPT-4o Integration
+1. OpenAI GPT-4o Integration
 **Purpose**: Natural language processing and content generation
 **Usage**: 
 - Converts customer descriptions like "customers who spent over ₹10,000" into database queries
@@ -228,27 +228,27 @@ npm run dev
 - Engagement rate predictions
 - Personalization placeholders
 
-## 🚧 Known Limitations and Assumptions
+Known Limitations and Assumptions
 
-### Technical Limitations
+Technical Limitations
 1. **OpenAI API Dependency**: AI features require valid API key and quota
 2. **Single-server Architecture**: Not horizontally scaled (suitable for demo/MVP)
 3. **Simulated Delivery**: Uses mock vendor API instead of real SMS/email services
 4. **Basic Authentication**: Demo auth system (production needs Google OAuth 2.0)
 
-### Business Assumptions
+Business Assumptions
 1. **Customer Data**: Assumes clean, validated customer information
-2. **Message Delivery**: 90% success rate simulation (real-world varies by channel)
+2. **Message Delivery**: 90% success rate simulation 
 3. **Engagement Rates**: AI predictions are estimates, not historical data
-4. **Segmentation Logic**: AND operations between rules (OR logic can be added)
+4. **Segmentation Logic**: AND operations between rules
 
-### Scalability Considerations
-1. **Database**: Current schema handles thousands of customers (millions need sharding)
-2. **Campaign Delivery**: Sequential processing (production needs queue system)
-3. **API Rate Limits**: No rate limiting implemented (production requirement)
-4. **Caching**: No caching layer (Redis recommended for production)
+Scalability Considerations
+1. **Database**: Current schema handles thousands of customers
+2. **Campaign Delivery**: Sequential processing
+3. **API Rate Limits**: No rate limiting implemented
+4. **Caching**: No caching layer
 
-## 🚀 Deployment Ready
+Deployment Ready
 
 The application is production-ready with:
 - Environment variable configuration
@@ -257,7 +257,7 @@ The application is production-ready with:
 - Security best practices
 - Scalable architecture
 
-## 📝 Demo Script
+Demo Script
 
 1. **Dashboard Overview** - Show customer metrics and quick actions
 2. **Campaign Creation** - Demonstrate rule builder and AI features
